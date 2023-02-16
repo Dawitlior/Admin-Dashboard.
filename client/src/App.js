@@ -8,7 +8,8 @@ import Dashboard from "scenes/dashboard";
 import Layout from "scenes/layout";
 import Products from "scenes/products";
 import Customers from "scenes/customers";
-import Transactions from "scenes/transactions"
+import Transactions from "scenes/transactions";
+import Geography from "scenes/geography";
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/transactions" element={<Transactions />} />
+              <Route path="/geography" element={<Geography />} />
             </Route>
           </Routes>
         </ThemeProvider>
