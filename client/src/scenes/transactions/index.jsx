@@ -15,7 +15,6 @@ const Transactions = () => {
   const [search, setSearch] = useState("");
 
   const [searchInput, setSearchInput] = useState("");
-  
   const { data, isLoading } = useGetTransactionsQuery({
     page,
     pageSize,
@@ -44,7 +43,7 @@ const Transactions = () => {
       headerName: "# of Products",
       flex: 0.5,
       sortable: false,
-      renderCell: (params) => params.value.length
+      renderCell: (params) => params.value.length,
     },
     {
       field: "cost",
