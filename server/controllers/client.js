@@ -34,10 +34,10 @@ export const getCustomers = async (request, response) => {
   }
 };
 
-export const getTransactions = async (req, res) => {
+export const getTransactions = async (request, response) => {
   try {
     // sort should look like this: { "field": "userId", "sort": "desc"}
-    const { page = 1, pageSize = 20, sort = null, search = "" } = req.query;
+    const { page = 1, pageSize = 20, sort = null, search = "" } = request.query;
 
     // formatted sort should look like { userId: -1 }
     const generateSort = () => {
@@ -64,12 +64,12 @@ export const getTransactions = async (req, res) => {
       name: { $regex: search, $options: "i" },
     });
 
-    res.status(200).json({
-      transactions,
+    response.status(200).json({
       total,
+      transactions,
     });
   } catch (error) {
-    res.status(404).json({ message: error.message });
+    response.status(404).json({ message: error.message });
   }
 };
 

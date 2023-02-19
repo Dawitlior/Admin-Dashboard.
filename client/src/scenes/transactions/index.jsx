@@ -7,7 +7,6 @@ import DataGridCustomToolbar from "components/DataGridCustomToolbar";
 
 const Transactions = () => {
   const theme = useTheme();
-
   // values to be sent to the backend
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
@@ -21,6 +20,7 @@ const Transactions = () => {
     sort: JSON.stringify(sort),
     search,
   });
+  console.log("🚀 ~ file: index.jsx:24 ~ Transactions ~ isLoading", isLoading,data)
 
   const columns = [
     {

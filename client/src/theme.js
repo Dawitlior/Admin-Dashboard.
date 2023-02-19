@@ -43,7 +43,7 @@ export const tokensDark = {
 };
 
 // function that reverses the color palette
-const reverseTokens = (tokensDark) => {
+function reverseTokens(tokensDark) {
   const reversedTokens = {};
   Object.entries(tokensDark).forEach(([key, val]) => {
     const keys = Object.keys(val);
@@ -86,7 +86,7 @@ export const themeSettings = (mode) => {
             },
           }
         : {
-            // palette values for light-mode
+            // palette values for light mode
             primary: {
               ...tokensLight.primary,
               main: tokensDark.grey[50],
