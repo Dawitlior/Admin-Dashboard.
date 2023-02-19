@@ -11,15 +11,17 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 // data imports
 import User from "./models/User.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import Transaction from "./models/Transaction.js";
+import OverallStat from "./models/overallStat.js";
 import {
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
+  dataOverallStat
 } from "./data/index.js";
-import Product from "./models/Product.js";
-import ProductStat from "./models/ProductStat.js";
-import Transaction from "./models/Transaction.js";
 
 dotenv.config();
 const app = express();
@@ -49,5 +51,6 @@ mongoose
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(`${error} did not connect to Mongoose`));
