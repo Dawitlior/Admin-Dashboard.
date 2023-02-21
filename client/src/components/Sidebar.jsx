@@ -195,8 +195,8 @@ const Sidebar = ({
           </Box>
 
           <Box position="relative" bottom="2rem">
-            <Divider />
             <FlexBetween testTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+            <Divider />
               <Box
                 component="img"
                 alt="profile"
