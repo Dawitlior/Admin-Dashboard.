@@ -64,6 +64,10 @@ const navItems = [
     icon: null,
   },
   {
+    text: "Geography",
+    icon: <PublicOutlined />,
+  },
+  {
     text: "Products",
     icon: <ShoppingCartOutlined />,
   },
@@ -75,10 +79,7 @@ const navItems = [
     text: "Transactions",
     icon: <ReceiptLongOutlined />,
   },
-  {
-    text: "Geography",
-    icon: <PublicOutlined />,
-  },
+
   {
     text: "Management",
     icon: null,

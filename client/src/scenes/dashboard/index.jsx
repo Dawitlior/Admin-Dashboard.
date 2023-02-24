@@ -71,6 +71,7 @@ const Dashboard = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
+            download="report.pdf"
           >
             <DownloadOutlined sx={{ mr: "10px" }} />
             Download reports
