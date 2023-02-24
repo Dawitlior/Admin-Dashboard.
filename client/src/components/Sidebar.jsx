@@ -38,26 +38,7 @@ const navItems = [
     text: "Dashboard",
     icon: <HomeOutlined />,
   },
-  {
-    text: "Client Facing",
-    icon: null,
-  },
-  {
-    text: "Products",
-    icon: <ShoppingCartOutlined />,
-  },
-  {
-    text: "Customers",
-    icon: <Groups2Outlined />,
-  },
-  {
-    text: "Transactions",
-    icon: <ReceiptLongOutlined />,
-  },
-  {
-    text: "Geography",
-    icon: <PublicOutlined />,
-  },
+
   {
     text: "Sales",
     icon: null,
@@ -77,6 +58,26 @@ const navItems = [
   {
     text: "Breakdown",
     icon: <PieChartOutlined />,
+  },
+  {
+    text: "Client Facing",
+    icon: null,
+  },
+  {
+    text: "Products",
+    icon: <ShoppingCartOutlined />,
+  },
+  {
+    text: "Customers",
+    icon: <Groups2Outlined />,
+  },
+  {
+    text: "Transactions",
+    icon: <ReceiptLongOutlined />,
+  },
+  {
+    text: "Geography",
+    icon: <PublicOutlined />,
   },
   {
     text: "Management",
@@ -131,7 +132,7 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontwidth="bold">
-                    ECOMVISION
+                    DASHBOARD
                   </Typography>
                   {!isNonMobile && (
                     <IconButton
@@ -194,9 +195,9 @@ const Sidebar = ({
             </List>
           </Box>
 
-          <Box position="relative" bottom="2rem">
+          <Box position="relative" bottom="-1rem">
             <FlexBetween testTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
-            <Divider />
+              <Divider />
               <Box
                 component="img"
                 alt="profile"
@@ -206,25 +207,25 @@ const Sidebar = ({
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
               />
-                <Box textAlign="left">
-                  <Typography
-                    fontWeight="bold"
-                    fontSize="0.9rem"
-                    sx={{ color: theme.palette.secondary[100] }}
-                  >
-                    {user.name}
-                  </Typography>
-                  <Typography
-                    fontWeight="bold"
-                    fontSize="0.8rem"
-                    sx={{ color: theme.palette.secondary[200] }}
-                  >
-                    {user.occupation}
-                  </Typography>
-                </Box>
-                <SettingsOutlined
-                sx={{ color: theme.palette.secondary[300], fontSize: "25px"}}
-                />
+              <Box textAlign="left">
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.9rem"
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.8rem"
+                  sx={{ color: theme.palette.secondary[200] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
             </FlexBetween>
           </Box>
         </Drawer>
