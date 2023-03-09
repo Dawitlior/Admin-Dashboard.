@@ -22,6 +22,7 @@ import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
 
 const Dashboard = () => {
+  
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const { data, isLoading } = useGetDashboardQuery();
@@ -63,7 +64,7 @@ const Dashboard = () => {
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
         <Box>
-          <Button
+          {/* <Button
             sx={{
               backgroundColor: theme.palette.secondary.light,
               color: theme.palette.background.alt,
@@ -71,11 +72,10 @@ const Dashboard = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
-            download="report.pdf"
           >
             <DownloadOutlined sx={{ mr: "10px" }} />
-            Download reports
-          </Button>
+            Download Reports
+          </Button> */}
         </Box>
       </FlexBetween>
 
