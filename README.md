@@ -4,7 +4,7 @@ Admin Dashboard
 Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit and Redux Toolkit Query
 
 ##The tools i used to develop the server: 
-using Node JS, Express Js, Mongoose, and MongoDB
+Node.js, Express.js, Mongoose, MongoDB
 ---------------
 
 ## So what to we looking about: 
