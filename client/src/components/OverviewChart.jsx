@@ -6,6 +6,7 @@ import { useGetSalesQuery } from "state/api";
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();
+  console.log("🚀 ~ file: OverviewChart.jsx:9 ~ OverviewChart ~ data:", data)
 
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];
@@ -40,8 +41,8 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       { sales: 0, units: 0 }
     );
 
-    return [[totalSalesLine], [totalUnitsLine]]
-  }, [data]);
+    return [[totalSalesLine], [totalUnitsLine]];
+  }, [data, theme.palette.secondary]);
 
   if (!data || isLoading) return "Loading...";
 
