@@ -2,11 +2,11 @@
 
 
 So a little about the application,
-An end-to-end application that can help you manage the information you have in a convenient and modern way.
+This application uses advanced technologies to help businesses manage their information more effectively. On the front-end, i've used tools like Nivo for data visualization, redux/toolkit query for fast API calls, and MUI for a sleek user interface. i've also used react-datepicker to manage dates and times.
 
-Let's say you have a business and you want to manage your information in a much better way,
+On the back-end, i've used technologies like dotenv for managing environment variables, Helmet for security, morgan for logging, and mongoose for interacting with the database. The most interesting feature of This application is server-side pagination, which helps businesses manage large amounts of data more efficiently.
 
-you will find that this application is effective for you.
+Overall, This application is designed to be fast, secure, and user-friendly, with advanced features like data visualization and server-side pagination to help businesses manage their information in a more effective way.
 
 take a look : 
 
@@ -28,15 +28,13 @@ take a look :
  ## When on the front end I use advanced technologies
   For example:
   
- Nivo - provides a rich set of dataviz components, built on top of D3 and React.
+ Nivo- is a data visualization library built on top of D3 and React, which allows for rich and interactive charts and graphs.
+ 
+redux/toolkit query- is a library that provides a powerful and efficient way to handle API calls and manage data in the front-end.
 
-redux/toolkit query - a fastest way for api calls
+MUI- is a user interface library that provides a modern and sleek design, with pre-built components that can be easily customized to fit your needs.
 
-MUI for building the UI in the most advanced UI,
-
-react 18.2.0 and hooks.
-
-react-datepicker
+react-datepicker- is a library that provides a user-friendly way to handle dates and times.
 
 The most interesting:
 nivo charts
@@ -51,10 +49,13 @@ there link for the website: https://nivo.rock
 
 For example:
 
-dotenv - for environment variables
-Helmet - for safety request
-morgan
-mongoose
+dotenv- is a module that loads environment variables from a .env file, making it easy to manage configuration settings.
+
+Helmet- is a library that helps secure Express apps by setting various HTTP headers to prevent common attacks like cross-site scripting and clickjacking.
+
+morgan- is a logging middleware for Express that helps you keep track of requests and responses in your application.
+
+mongoose- is a MongoDB object modeling tool that provides a straightforward way to interact with the database.
 
 The most interesting:
 server-side pagination
