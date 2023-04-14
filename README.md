@@ -28,13 +28,13 @@ take a look :
  ## When on the front end I use advanced technologies
   For example:
   
- Nivo- is a data visualization library built on top of D3 and React, which allows for rich and interactive charts and graphs.
+ + Nivo- is a data visualization library built on top of D3 and React, which allows for rich and interactive charts and graphs.
  
-redux/toolkit query- is a library that provides a powerful and efficient way to handle API calls and manage data in the front-end.
++ redux/toolkit query- is a library that provides a powerful and efficient way to handle API calls and manage data in the front-end.
 
-MUI- is a user interface library that provides a modern and sleek design, with pre-built components that can be easily customized to fit your needs.
++ MUI- is a user interface library that provides a modern and sleek design, with pre-built components that can be easily customized to fit your needs.
 
-react-datepicker- is a library that provides a user-friendly way to handle dates and times.
++ react-datepicker- is a library that provides a user-friendly way to handle dates and times.
 
 The most interesting:
 nivo charts
@@ -49,13 +49,13 @@ there link for the website: https://nivo.rock
 
 For example:
 
-dotenv- is a module that loads environment variables from a .env file, making it easy to manage configuration settings.
++ dotenv- is a module that loads environment variables from a .env file, making it easy to manage configuration settings.
 
-Helmet- is a library that helps secure Express apps by setting various HTTP headers to prevent common attacks like cross-site scripting and clickjacking.
++ Helmet- is a library that helps secure Express apps by setting various HTTP headers to prevent common attacks like cross-site scripting and clickjacking.
 
-morgan- is a logging middleware for Express that helps you keep track of requests and responses in your application.
++ morgan- is a logging middleware for Express that helps you keep track of requests and responses in your application.
 
-mongoose- is a MongoDB object modeling tool that provides a straightforward way to interact with the database.
++ mongoose- is a MongoDB object modeling tool that provides a straightforward way to interact with the database.
 
 The most interesting:
 server-side pagination
