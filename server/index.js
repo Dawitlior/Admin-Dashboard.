@@ -31,10 +31,13 @@ app.use("/sales", salesRoutes);
 const PORT = process.env.PORT || 9000;
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://lior123:lior123@cluster0.tlt391k.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
