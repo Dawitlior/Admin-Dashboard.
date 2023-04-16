@@ -2,17 +2,17 @@ import User from "../models/User.js";
 import OverallStat from "../models/overallStat.js";
 import Transaction from "../models/Transaction.js";
 
-export const getUser = async (request, response) => {
+export const getUser = async (req, res) => {
   try {
-    const { id } = request.params;
+    const { id } = req.params;
     const user = await User.findById(id);
-    response.status(200).json(user);
+    res.status(200).json(user);
   } catch (error) {
-    response.status(404).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
-export const getDashboardStats = async (request, response) => {
+export const getDashboardStats = async (req, res) => {
   try {
     // hardcoded values
     const currentMonth = "November";
@@ -43,7 +43,7 @@ export const getDashboardStats = async (request, response) => {
       return date === currentDay;
     });
 
-    response.status(200).json({
+    res.status(200).json({
       totalCustomers,
       yearlyTotalSoldUnits,
       yearlySalesTotal,
@@ -54,6 +54,6 @@ export const getDashboardStats = async (request, response) => {
       transactions,
     });
   } catch (error) {
-    response.status(404).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };

@@ -4,11 +4,11 @@ import User from "../models/User.js";
 import Transaction from "../models/Transaction.js";
 import getCountryIso3 from "country-iso-2-to-3";
 
-export const getProducts = async (request, response) => {
+export const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
 
-    const productWithStat = await Promise.all(
+    const productsWithStats = await Promise.all(
       products.map(async (product) => {
         const stat = await ProductStat.find({
           productId: product._id,
@@ -19,25 +19,26 @@ export const getProducts = async (request, response) => {
         };
       })
     );
-    response.status(200).json(productWithStat);
+
+    res.status(200).json(productsWithStats);
   } catch (error) {
-    response.status(404).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
-export const getCustomers = async (request, response) => {
+export const getCustomers = async (req, res) => {
   try {
     const customers = await User.find({ role: "user" }).select("-password");
-    response.status(200).json(customers);
+    res.status(200).json(customers);
   } catch (error) {
-    response.status(404).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
-export const getTransactions = async (request, response) => {
+export const getTransactions = async (req, res) => {
   try {
     // sort should look like this: { "field": "userId", "sort": "desc"}
-    const { page = 1, pageSize = 20, sort = null, search = "" } = request.query;
+    const { page = 1, pageSize = 20, sort = null, search = "" } = req.query;
 
     // formatted sort should look like { userId: -1 }
     const generateSort = () => {
@@ -64,16 +65,16 @@ export const getTransactions = async (request, response) => {
       name: { $regex: search, $options: "i" },
     });
 
-    response.status(200).json({
-      total,
+    res.status(200).json({
       transactions,
+      total,
     });
   } catch (error) {
-    response.status(404).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
-export const getGeography = async (request, response) => {
+export const getGeography = async (req, res) => {
   try {
     const users = await User.find();
 
@@ -91,7 +92,8 @@ export const getGeography = async (request, response) => {
         return { id: country, value: count };
       }
     );
-    response.status(200).json(formattedLocations);
+
+    res.status(200).json(formattedLocations);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
