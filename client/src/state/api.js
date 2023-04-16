@@ -63,7 +63,6 @@ export const api = createApi({
   }),
 });
 
-
 export const {
   useGetUserQuery,
   useGetProductsQuery,
@@ -75,4 +74,3 @@ export const {
   useGetUserPerformanceQuery,
   useGetDashboardQuery,
 } = api;
- 

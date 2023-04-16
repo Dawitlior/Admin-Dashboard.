@@ -4,7 +4,7 @@ import Header from "components/Header";
 import { useGetSalesQuery } from "state/api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import {ResponsiveLine} from "@nivo/line" 
+import { ResponsiveLine } from "@nivo/line";
 
 const Daily = () => {
   const [startDate, setStartDate] = useState(new Date("2021-02-01"));
