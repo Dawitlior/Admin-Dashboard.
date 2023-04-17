@@ -7,8 +7,7 @@ import { geoData } from "state/geoData";
 
 const Geography = () => {
   const theme = useTheme();
-  const { data, isLoading } = useGetGeographyQuery();
-  console.log("🚀 ~ file: index.jsx:11 ~ Geography ~ isLoading:", isLoading);
+  const { data } = useGetGeographyQuery();
 
   return (
     <Box m="1.5rem 2.5rem">

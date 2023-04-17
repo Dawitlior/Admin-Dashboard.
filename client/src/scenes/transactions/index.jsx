@@ -20,11 +20,6 @@ const Transactions = () => {
     sort: JSON.stringify(sort),
     search,
   });
-  console.log(
-    "🚀 ~ file: index.jsx:24 ~ Transactions ~ isLoading",
-    isLoading,
-    data
-  );
 
   const columns = [
     {
