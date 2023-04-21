@@ -19,7 +19,16 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+
+// Enable CORS
+app.use(
+  cors({
+    origin: "https://admin-frontend-4uls.onrender.com", // Change this to your specific frontend URL
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  })
+);
 
 /* ROUTES */
 app.use("/client", clientRoutes);
@@ -40,4 +49,4 @@ mongoose
   })
   .catch((error) => console.log(`${error} did not connect`));
 
-  //https://admin-frontend-4uls.onrender.com
+//https://admin-frontend-4uls.onrender.com
