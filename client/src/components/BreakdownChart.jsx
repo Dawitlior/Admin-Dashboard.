@@ -5,8 +5,6 @@ import { useGetSalesQuery } from "state/api";
 
 const BreakdownChart = ({ isDashboard = false }) => {
   const { data, isLoading } = useGetSalesQuery();
-  console.log("🚀 ~ file: BreakdownChart.jsx:8 ~ BreakdownChart ~ isLoading", isLoading)
-  console.log("🚀 ~ file: BreakdownChart.jsx:8 ~ BreakdownChart ~ data", data)
   const theme = useTheme();
 
   if (!data || isLoading) return "Loading...";
