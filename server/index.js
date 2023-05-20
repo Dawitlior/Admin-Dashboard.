@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Enable CORS
 app.use(
   cors({
-    origin: "https://admin-frontend-4uls.onrender.com", // Change this to your specific frontend URL
+    origin: "https://admin-frontend-4uls.onrender.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
@@ -48,5 +48,3 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
   .catch((error) => console.log(`${error} did not connect`));
-
-//https://admin-frontend-4uls.onrender.com

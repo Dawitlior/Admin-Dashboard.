@@ -7,7 +7,6 @@ import getCountryIso3 from "country-iso-2-to-3";
 export const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
-
     const productsWithStats = await Promise.all(
       products.map(async (product) => {
         const stat = await ProductStat.find({
@@ -37,10 +36,7 @@ export const getCustomers = async (req, res) => {
 
 export const getTransactions = async (req, res) => {
   try {
-    // sort should look like this: { "field": "userId", "sort": "desc"}
     const { page = 1, pageSize = 20, sort = null, search = "" } = req.query;
-
-    // formatted sort should look like { userId: -1 }
     const generateSort = () => {
       const sortParsed = JSON.parse(sort);
       const sortFormatted = {
@@ -77,7 +73,6 @@ export const getTransactions = async (req, res) => {
 export const getGeography = async (req, res) => {
   try {
     const users = await User.find();
-
     const mappedLocations = users.reduce((acc, { country }) => {
       const countryISO3 = getCountryIso3(country);
       if (!acc[countryISO3]) {
@@ -92,7 +87,6 @@ export const getGeography = async (req, res) => {
         return { id: country, value: count };
       }
     );
-
     res.status(200).json(formattedLocations);
   } catch (error) {
     res.status(404).json({ message: error.message });
