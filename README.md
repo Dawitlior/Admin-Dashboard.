@@ -64,7 +64,8 @@ server-side pagination
 
 ## Dashboard Data_Model
 
-https://lucid.app/lucidchart/73d44f67-a9a2-4146-9ad2-4263638486fe/edit?viewport_loc=-125%2C322%2C2291%2C1089%2C0_0&invitationId=inv_d2fe1c1c-e193-403d-a3c9-4e7815ddb473
+![2023-06-23](https://github.com/Dawitlior/Admin-Dashboard./assets/102303153/412e84c0-f8d2-4ba8-a277-6956cbef5c1b)
+
 
 
 
