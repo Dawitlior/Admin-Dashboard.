@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useTheme } from "@mui/material";
+import { Alert, AlertTitle, Box, LinearProgress, useTheme } from "@mui/material";
 import { useGetGeographyQuery } from "state/api";
 import Header from "components/Header";
 import { ResponsiveChoropleth } from "@nivo/geo";
@@ -92,7 +92,15 @@ const Geography = () => {
             ]}
           />
         ) : (
-          <>...Loading</>
+          <>
+            <Alert sx={{ marginTop: "3rem", paddingLeft: "3rem", paddingRight: "3rem" }} severity="info">
+              <AlertTitle>Loading</AlertTitle>
+              The Information Is In Progress <strong>Please Wait</strong>
+            </Alert>
+            <Box sx={{ width: "100%", marginTop: "8rem" }}>
+              <LinearProgress />
+            </Box>
+          </>
         )}
       </Box>
     </Box>

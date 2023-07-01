@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Box, useTheme } from "@mui/material";
+import { Alert, AlertTitle, Box, LinearProgress, useTheme } from "@mui/material";
 import Header from "components/Header";
 import { useGetSalesQuery } from "state/api";
 import DatePicker from "react-datepicker";
@@ -177,7 +177,15 @@ const Daily = () => {
             ]}
           />
         ) : (
-          <>Loading...</>
+          <>
+            <Alert sx={{marginTop: "5rem"}} severity="info">
+              <AlertTitle>Loading</AlertTitle>
+              The Information Is In Progress <strong>Please Wait</strong>
+            </Alert>
+            <Box sx={{ width: "100%", marginTop: "10rem" }}>
+              <LinearProgress />
+            </Box>
+          </>
         )}
       </Box>
     </Box>
